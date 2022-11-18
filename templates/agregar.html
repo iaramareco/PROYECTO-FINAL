@@ -1,0 +1,57 @@
+{% extends 'usuarioAdmin.html' %}
+{% block body %}
+
+<h1>Agregar pregunta</h1>
+<label for="pregunta">Pregunta: </label>
+<input type="text" id="pregunta" name="pregunta"></input>
+<br/><br/>
+
+<label for="categoria">Categoria: </label>
+<select name="categorias" id="categorias">
+  <option value="Musica"selected>Musica</option>
+  <option value="Cine">Cine</option>
+  <option value="Libros">Libros</option>
+</select>
+  <br/><br/>
+<button onclick="agregar()">Publicar pregunta</button>
+
+
+
+
+<h1>Agregar respuesta</h1>
+<p>Recordá que solo puede haber 4 respuestas por pregunta y además solo una puede ser correcta</p>
+ <label for="preguntaLista">Pregunta: </label>
+  <select id="preguntaLista" name="preguntaLista">
+    {% for elemento in preguntas %}
+      <option>{{elemento[0]}}</option>
+    {% endfor %}
+  </select>
+
+
+<br></br>
+  <label for="respuesta">Respuesta: </label>
+  <input type="text" id="respuesta" name="respuesta"></input>
+<br></br>
+  <label for="idPregunta">ID Pregunta: </label>
+  <input type="number" id="idPregunta" name="idPregunta"></input>
+<br></br>
+
+<label for="categoria">Categoria: </label>
+<select name="categoria" id="categoria">
+  <option value="Musica"selected>Musica</option>
+  <option value="Cine">Cine</option>
+  <option value="Libros">Libros</option>
+</select>
+  <br/><br/>
+
+  <label for="esCorrecta">¿Es correcta?: </label>
+  <select name="esCorrecta" id=esCorrecta>
+    <option value=1 selected>1</option>
+    <option value=0>0</option>
+  </select>
+
+
+  <br/><br/>
+  <button onclick="agregarRespuesta()">Publicar respuesta</button>
+
+{% endblock %}

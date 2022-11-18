@@ -1,0 +1,65 @@
+<!doctype html>
+    <head>
+      <meta charset="utf-8">
+      <title>Tu perfil</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='/css/perfil.css') }}">
+    </head>
+<script>
+      let perfil = {{ perfil|tojson }}
+  </script>
+<nav>
+    {% if session['nombre'] != 'admin' and session['contraseña'] != 'admin' %}
+    <div class="casa" id="casa">
+      <a href= "{{ url_for('categorias') }}"><img src="{{ url_for('static', filename='/img/logo-inicio.png') }}" id="logo-inicio" class="casita"></a>
+    </div>
+  {% endif %}
+  
+ {% if session['nombre'] == 'admin' and session['contraseña'] == 'admin' %}
+    <div class="casa" id="casa">
+      <a href= "{{ url_for('inicio') }}"><img src="{{ url_for('static', filename='/img/logo-inicio.png') }}" id="logo-inicio" class="casita"></a>
+    </div>
+  {% endif %}
+  
+</nav>
+    <body>
+      <div class="titulo">
+        <h1>Bienvenido {{nombre}}</h1>
+      </div> 
+      <h2>Tu ranking: </h2>
+      <div class="tabla">
+        <table>
+          <thead>
+            <tr>
+              <th>Categoría</th>
+              <th>Puntaje</th>
+              <th>Tiempo </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Categoría Música</td>
+              <td id="puntaje1"></td>
+              <td id="tiempo1"></td>
+            </tr>
+            <tr>
+              <td>Categoría Cine</td>
+              <td id="puntaje2"></td>
+              <td id="tiempo2"></td>
+            </tr>
+            <tr>
+              <td>Categoría Libros</td>
+              <td id="puntaje3"></td>
+              <td id="tiempo3"></td>
+            </tr>
+            <tr>
+              <td>Categoría Mix</td>
+              <td id="puntaje4"></td>
+              <td id="tiempo4"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>      
+    </body>
+</html>
+
+<script src="{{ url_for('static', filename='/scripts/perfil.js') }}"></script>

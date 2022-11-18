@@ -1,0 +1,101 @@
+body {
+  font-family: 'Verdana';
+  background-color: #feffb8;
+}
+
+.titulo2 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 250%;
+  background-color: #ffb56b ;
+  float:top;
+}
+
+h2 {
+  margin-right:210px;
+}
+
+.libros {
+  margin-left: -20px;
+  background-color: #6a006a;
+  color: white;
+}
+
+button {
+  margin-top: 150px;
+  font-size: 24px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  padding: 16px 16px;
+  width: 150px;
+  height: 70px;
+  float: left;
+  transition-duration: 0.4s;
+  margin-left: -100px;
+}
+
+.cine {
+  margin-left: 200px;
+  background-color: #008282;
+  color: white;
+}
+
+.musica {
+  margin-left: 200px;
+  background-color: #1f9400;
+  color: white;
+}
+
+.mix {
+  margin-left: 200px;
+  background-color: #e00707;
+  color: white;
+}
+
+.msg {
+  position:absolute;
+  font-size: 100%;;
+}
+
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+input {
+  background-color: #ceb0ff; 
+  color: white;
+  padding: 28px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  width: 200px;
+  border-radius: 20px;
+  border: 4px solid #b88cff;
+  transition-duration: 0.4s;
+  
+}
+
+.btnAdmin {
+  float:top;
+  margin-top:650px;
+}
+
+.btnLogout {
+  float:top;
+}
+
+.btnAdmin {
+  float:left;
+}
+
+.cerrarSesion {
+  margin-left: 1375px;
+}
+
+.perfil {
+  float:top;
+  float:left;
+  margin-left:-200px;
+  margin-top:-85px;
+}

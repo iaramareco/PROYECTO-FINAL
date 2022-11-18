@@ -1,0 +1,59 @@
+<!doctype html>
+    <head>
+      <meta charset="utf-8">
+      <title>Gracias por jugar</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='/css/finDelJuego.css') }}">
+    </head>
+ <script>
+      let rankingCine = {{ rankingCine|tojson }}
+  </script>
+    <body>
+{% if session['nombre'] != 'admin' and session['contraseña'] != 'admin' %}
+    <div class="casa" id="casa">
+      <a href= "{{ url_for('categorias') }}"><img src="{{ url_for('static', filename='/img/logo-inicio.png') }}" id="logo-inicio" class="casita"></a>
+    </div>
+  {% endif %}
+  
+ {% if session['nombre'] == 'admin' and session['contraseña'] == 'admin' %}
+    <div class="casa" id="casa">
+      <a href= "{{ url_for('inicio') }}"><img src="{{ url_for('static', filename='/img/logo-inicio.png') }}" id="logo-inicio" class="casita"></a>
+    </div>
+  {% endif %}
+      <div class="titulo">
+        <h1>Gracias por jugar {{nombre}}</h1>
+      </div>
+      <div class="resultados" id ="puntos">
+        <p>Puntos: {{puntaje}}/12</p>
+        <p>Tiempo: {{tiempoFinal}}</p>
+      </div>
+
+ <div class="tabla">
+        <table>
+          <caption>Ranking</caption>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Puntaje</th>
+              <th>Tiempo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="nombreCine"></td>
+              <td id="rankingCine"></td>
+              <td id="tiempoCine"></td>
+            </tr>
+            <tr>
+              <td id="nombreCine2"></td>
+              <td id="rankingCine2"></td>
+              <td id="tiempoCine2"></td>
+            </tr>
+            <tr>
+              <td id="nombreCine3"></td>
+              <td id="rankingCine3"></td>
+              <td id="tiempoCine3"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+<script src="{{ url_for('static', filename='/scripts/rankingCine.js') }}"></script>

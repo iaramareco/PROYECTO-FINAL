@@ -1,0 +1,25 @@
+body {
+  font-family: 'Verdana';
+  background-color: #feffb8;
+}
+
+.aviso {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 250%;
+  background-color: #ffb56b ;
+}
+
+input {
+  font-size: 20px;
+  background-color: #ceb0ff;
+  border: 2px solid #b88cff;
+  border-radius: 20px;
+  padding: 36px 70px;
+  margin-left:700px;
+  color: white;
+}
+
+.btn {
+  margin:0 auto;
+}

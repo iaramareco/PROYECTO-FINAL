@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Usuario administrador</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/usuarioAdmin.css') }}">
+  </head>
+  <body>
+  <h2>Sos administrador, podés consultar, agregar, modificar y eliminar preguntas y respuestas</h2>
+      <div class="casa" id="casa">
+      <a href= "{{ url_for('inicio') }}"><img src="{{ url_for('static', filename='/img/logo-inicio.png') }}" id="logo-inicio" class="casita"></a>
+    </div>
+</nav>
+    <h3>Preguntas y respuestas</h3>
+    <a href="{{url_for('consultarPreguntas')}}">Consultar preguntas y respuestas</a>
+    <a href="{{url_for('agregarPreguntas')}}">Agregar preguntas y respuestas</a>
+    <a href="{{url_for('editarPreguntas')}}">Modificar preguntas y respuestas</a>
+    <a href="{{url_for('eliminarPreguntas')}}">Eliminar preguntas y respuestas</a>
+
+
+
+    <h3>Usuarios</h3>
+    <a href="{{url_for('consultarUsuarios')}}">Consultar usuarios</a>
+    <a href="{{url_for('eliminarUsuarios')}}">Eliminar usuarios</a>
+
+    {% block body%}
+    {% endblock %}
+    
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+    <script src="static/scripts/crud.js"></script>
+  </body>
+</html>

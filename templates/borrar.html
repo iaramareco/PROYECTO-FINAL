@@ -1,0 +1,21 @@
+{% extends 'usuarioAdmin.html' %}
+{% block body %}
+<h1>Eliminar Pregunta</h1>
+  <label for="pregunta">Pregunta: </label>
+  <select id="pregunta">
+    {% for elemento in preguntas %}
+      <option>{{elemento[0]}}</option>
+    {% endfor %}
+  </select>
+
+<button onclick="borrarPregunta()">Eliminar pregunta</button>
+<h1>Eliminar Respuesta</h1>
+  <label for="respuesta">Respuesta: </label>
+  <select id="respuesta">
+    {% for item in respuestas %}
+      <option>{{item[0]}}</option>
+    {% endfor %}
+  </select>
+<button onclick="borrarRespuesta()">Eliminar respuesta</button>
+
+{% endblock %}

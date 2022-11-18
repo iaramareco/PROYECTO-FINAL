@@ -1,0 +1,62 @@
+<!doctype html>
+    <head>
+      <meta charset="utf-8">
+      <title>Elegir categoría</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='/css/categorias_registro.css') }}">
+    </head>
+
+    <body>
+      {% if session['nombre'] == 'admin' and session['contraseña'] == 'admin' %}
+      <div class="btnAdmin">
+        <form action="{{ url_for('admin') }}">
+          <input type="submit" value="Panel admin">
+        </form>
+      </div>
+      {% endif %}
+      
+      <div class="cerrarSesion">
+        <form action="{{ url_for('logout') }}">
+          <input type="submit" value="Cerrar sesión">
+        </form>
+      </div>
+      <div class="perfil">
+        <form action="{{ url_for('perfil')}}">
+          <input type="submit" value="Perfil">
+        </form>
+      </div>  
+      <div class="titulo2">
+        <h2>Elige tu categoría:</h2>
+      </div>
+
+      <div class="form-categorias">
+        <form action='/preguntasLibros'>
+          <div class="btn1">
+            <button type="submit" id='1' name='libros' class="libros">Libros</button>
+          </div>
+        </form>
+
+          <form action='/preguntasCine'>
+          <div class="btn2">
+            <button type="submit" id='2' name='cine' class="cine">Cine</button>           
+          </div>
+          </form>
+
+          <form action='/preguntasMusica'>
+          <div class="btn3">
+            <button type="submit" id='3' name='musica' class="musica">Música</button>
+          </div>
+          </form>
+
+          <form action='/preguntasMix'> 
+          <div class="btn4">
+            <button type="submit" id='4' name='mix' class="mix" onclick="myFunction()">Mix</button>
+          </div>
+          </form>
+        </form>
+      </div>
+      
+      <div class="msg">
+        <h3>{{ msg }}</h3>
+      </div>
+    </body>
+</html>

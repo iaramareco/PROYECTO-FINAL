@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <head>
+      <meta charset="utf-8">
+      <title>Registrarse</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='/css/registro.css') }}">
+    </head>
+
+    <body>
+      <div class="titulo">
+        <h1>Registro</h1>
+      </div>
+
+      <div class="form-registro">
+        <form method='POST' action="{{url_for('registrarse2')}}">
+          <label>Nombre: </label>
+          <input type="text" id="nombre" name="nombre" required>
+          <br><br>
+          <label>Contraseña: </label>
+          <input type="password" id="contraseña" name="contraseña" required> 
+          <br><br>
+          <input type="checkbox" name="check" value='1' required>
+          <label>Acepto los terminos y condiciones.</label>
+          <br><br>
+          <button type="submit"">Registrar</button>
+          <br><br>
+          <div class="msg">{{ msg }}</div>
+      </form>
+      </div>
+  </body>
+<script src="{{ url_for('static', filename='/scripts/afirmaciones.js') }}"></script>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+    <head>
+      <meta charset="utf-8">
+      <title>Preguntas</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='/css/preguntas.css') }}" >
+    </head>
+ <script>
+      let afirmaciones = {{ afirmaciones|tojson }}
+      let respuestas = {{ respuestas|tojson }}
+  </script>
+<div class="todo" id="todo">
+<nav>
+    <div class="casa" id="casa">
+      <a href= "{{ url_for('categorias') }}"><img src="{{ url_for('static', filename='/img/logo-inicio.png') }}" id="logo-inicio" class="casita"></a>
+    </div>
+</nav>
+    <body>
+      <div class="titulo" id="titulo2">
+        <header>
+          <h1>Pregunta</h1>
+          <h1 id="titulo">1</h1>
+        </header>
+      </div>
+ <!---HASTA ACA TODO ES IGUAL--->     
+      <div class="contenido-pregunta" id="contenido">
+        <main>
+          <h2 id="pregunta"></h2>
+        </main>
+      </div>
+
+      <div class="correcto" id = "correcto" style ="display:none">
+        <h3>Respuesta correcta!</h3>
+      </div>
+
+      <div class="incorrecto" id="incorrecto" style = "display:none">
+        <h3>Respuesta incorrecta</h3>
+      </div>
+      
+      <div class="botones-respuestas" id="botones">
+        <footer id="footer">
+            <button id="prim-rta" onclick="check(this.getAttribute('data-num'))" class='btn-op1' data-num=""></button>
+            <button id="seg-rta" onclick="check2(this.getAttribute('data-num'))" class='btn-op2' data-num=""></button>
+            <button id="ter-rta" onclick="check3(this.getAttribute('data-num'))" class='btn-op3' data-num=""></button>
+            <button id="cuar-rta" onclick="check4(this.getAttribute('data-num'))" class='btn-op4' data-num=""></button>
+        </footer>
+        </div>  
+        <br><button type="button" onclick="siguiente()" id="siguiente" style="display:none">Siguiente</button><br>
+    </body>
+</div>
+<!--- si es correcto display pantalla que diga correcto, si es falso display pantalla que diga falso --->
+<script src="{{ url_for('static', filename='/scripts/afirmaciones.js') }}"></script>
+
+</html>

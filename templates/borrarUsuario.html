@@ -1,0 +1,12 @@
+{% extends 'usuarioAdmin.html' %}
+{% block body %}
+<h1>Eliminar Usuario</h1>
+  <label for="usuario">Usuario: </label>
+  <select id="usuario">
+    {% for elemento in usuarios %}
+      <option>{{elemento[0]}}</option>
+    {% endfor %}
+  </select>
+
+  <button onclick="borrarUsuario()">Eliminar usuario</button>
+{% endblock %}

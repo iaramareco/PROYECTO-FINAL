@@ -1,0 +1,45 @@
+body {
+  font-family: 'Verdana';
+  background-color: #feffb8;
+}
+
+.titulo {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 250%;
+  background-color: #ffb56b ;
+  float:top;
+  margin-top:-160px;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  float: top;
+}
+
+table, th, td {
+  border-color: #000000;
+  border: 2px solid;
+  padding: 8px;
+  text-align: center;
+  margin: 0 auto;
+  width: 700px;
+}
+
+table {
+  margin-top:50px;
+  height:400px;
+}
+
+caption {
+  margin-bottom:20px;
+  font-size:150%;
+}
+
+p {
+  margin: 0 auto;
+  font-size: 200%;
+  margin-left:700px;
+}

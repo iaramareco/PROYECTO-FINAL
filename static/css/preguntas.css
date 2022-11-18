@@ -1,0 +1,46 @@
+body {
+  font-family: 'Verdana';
+  background-color: #feffb8;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 250%;
+  background-color: #ffb56b ;
+}
+
+.casa{
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.casita {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  position:absolute;
+  top:60px;
+}
+
+button {
+  padding: 27px 77px;
+  color: #9aaffc;
+  text-color: ##4c72fc;
+  border:none;
+  font-size:15px;
+  border-radius:5px;
+}
+
+
+.siguiente{
+  margin-top:300px;
+}
+
+p {
+  text-align:center;
+  font-size:150px;
+}
+
+

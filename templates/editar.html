@@ -1,0 +1,34 @@
+{% extends 'usuarioAdmin.html' %}
+{% block body %}
+<h1>Modificar Pregunta</h1>
+  <label for="pregunta">Pregunta: </label>
+  <select id="pregunta">
+    {% for elemento in preguntas %}
+      <option>{{elemento[0]}}</option>
+    {% endfor %}
+  </select>
+  <br></br>
+  <label for="preguntaModificada">Pregunta modificada: </label>
+  <input type="text" id="preguntaModificada" name="preguntaModificada"></input>
+  <br></br>
+  <button onclick="editar()">Modificar pregunta</button>
+   <br></br>
+
+<h1>Modificar Respuesta</h1>
+ <label for="respuesta">Respuesta: </label>
+  <select id="respuesta">
+    {% for elemento in respuestas %}
+      <option>{{elemento[0]}}</option>
+    {% endfor %}
+  </select>
+
+<br></br>
+ <label for="respuestaModificada">Respuesta modificada: </label>
+  <input type="text" id="respuestaModificada" name="respuestaModificada"></input>
+  <br></br>
+
+
+<button onclick="editarRespuesta()">Modificar respuesta</button>
+
+
+{% endblock %}
